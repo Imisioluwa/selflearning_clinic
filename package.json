@@ -1,0 +1,22 @@
+{
+  "name": "selflearning_clinic",
+  "version": "1.0.0",
+  "description": "This task identifies Arithmetic and Geometric progression in an Array of numbers, It also generates an array of maximum and minimum number and identifies if a number is divisible by 3, 5 and 15 to generate, fizz, buzz or fizz_buzz.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Imisioluwa/selflearning_clinic.git"
+  },
+  "author": "Akande Imisioluwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Imisioluwa/selflearning_clinic/issues"
+  },
+  "homepage": "https://github.com/Imisioluwa/selflearning_clinic#readme",
+  "dependencies": {
+    "jasmine": "^2.5.3"
+  }
+}
