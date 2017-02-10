@@ -1,10 +1,27 @@
-var findMinMax = require("./minmax.js");
 (function() {
   'use strict';
 
-  describe('Min-Max Numbers in a List: ', function () {
+  var findMinMax = require('./minmax.js')
 
-    describe('Return the min and max number in the list in a new list follows `[min, max]`', function () {
+  describe('Min-Max Numbers in an Array: ', function () {
+
+    describe('Accept an array of numbers and output an array of number(s)', function () {
+
+      it("should produce an error message if input is not an array", function() {
+        expect(findMinMax("I'm a string")).not.toEqual("ValueError, array of numbers is expected");
+      });
+
+      it("should produce an error message if array input is empty", function() {
+        expect(findMinMax([])).not.toEqual("ValueError, array of numbers is expected");
+      });
+
+      it ('should return an array', function() {
+       expect(findMinMax([6, 1, 5, 9])).not.toBe('array', 'function should return an array');
+      });
+
+    });
+
+    describe('Return the min and max number in the array in a new array as follows `[min, max]`', function () {
 
       it('should return [1,4] for [1, 2, 3 , 4]', function () {
         expect(findMinMax([1, 2, 3, 4])).toEqual([1, 4]);
@@ -18,17 +35,28 @@ var findMinMax = require("./minmax.js");
         expect(findMinMax([4, 66, 6, 44, 7, 78, 8, 68, 2])).toEqual([2, 78]);
       });
 
+      it('should return [-8, -2] for [-2, -3, -4, -5, -6, -7, -8]', function () {
+        expect(findMinMax([-2, -3, -4, -5, -6, -7, -8])).toEqual([-8, -2]);
+      });
+
+      it('should return [4.52, 4.59] for [4.52, 4.53, 4.54, 4.55, 4.56, 4.57, 4.58, 4.59]', function() {
+        expect(findMinMax([4.52, 4.53, 4.54, 4.55, 4.56, 4.57, 4.58, 4.59])).toEqual([4.52, 4.59]);
+      });
+
     });
 
     describe('Return the number in the list in a new list follows `[min]` when the number is the min and max number in that list', function () {
+
+      it("should not return [4, 4] for [4, 4, 4, 4]", function() {
+        expect(findMinMax([4, 4, 4, 4])).not.toEqual([4, 4]);
+      });
 
       it('should return [4] for [4, 4, 4, 4]', function () {
         expect(findMinMax([4, 4, 4, 4])).toEqual([4]);
       });
 
     });
-
+  
   });
 
 })();
-
