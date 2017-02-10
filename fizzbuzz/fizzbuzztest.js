@@ -32,5 +32,10 @@ describe("Fizz Buzz tests ", function() {
   it("should return 101 since its indivisible by 3 and 5", function() {
     expect(fizzBuzz(101)).toBe(101);
   });
-
+  it("should return 0 for 0 since its indivisible by 3 and 5", function() {
+    expect(fizzBuzz(0)).toBe(0);
+  });
+  it("should return an error message since input is not an integer", function() {
+    expect(fizzBuzz("I'm not an Integer")).toBe("ValueError, Positive Integer input required");
+  }); 
 });
